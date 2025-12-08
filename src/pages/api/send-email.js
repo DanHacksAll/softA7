@@ -1,4 +1,4 @@
-export const prerender = false; // importante para permitir POST
+export const prerender = false;
 
 import nodemailer from "nodemailer";
 
