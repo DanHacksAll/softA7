@@ -1,0 +1,18 @@
+---
+const services = [
+{ title: "dApps", desc: "Aplicaciones descentralizadas seguras y escalables." },
+{ title: "Smart Contracts", desc: "Contratos inteligentes auditables y eficientes." },
+{ title: "Integración Web3", desc: "Conecta tu app tradicional con blockchain." }
+];
+---
+<section class="container">
+<h2>Servicios</h2>
+<div style="display:flex; flex-wrap:wrap; justify-content:center;">
+{services.map(s => (
+<div class="card" style="flex:1 1 300px;">
+<h3>{s.title}</h3>
+<p>{s.desc}</p>
+</div>
+))}
+</div>
+</section>

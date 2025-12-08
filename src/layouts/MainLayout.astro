@@ -1,0 +1,36 @@
+---
+const { title = "SOFTA7" } = Astro.props;
+---
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
+<link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<header>
+</header>
+<body>
+<slot />
+<script type="module">
+    import { ethers } from "https://cdn.jsdelivr.net/npm/ethers@6.7.0/dist/ethers.min.js";
+
+const connectBtn = document.getElementById("connectWallet");
+const walletText = document.getElementById("walletAddress");
+
+connectBtn.addEventListener("click", async () => {
+  if (typeof window.ethereum === "undefined") {
+    alert("Necesitas MetaMask para usar esta función Web3.");
+    return;
+  }
+
+  const provider = new ethers.BrowserProvider(window.ethereum);
+  const accounts = await provider.send("eth_requestAccounts", []);
+  const address = accounts[0];
+
+  walletText.textContent = "Wallet conectada: " + address;
+});
+</script>
+<script src="../scripts/fadeout.js"></script>
+</body>
+</html>

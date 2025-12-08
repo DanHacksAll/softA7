@@ -1,0 +1,277 @@
+:root {
+  --bg-light: #ffffff;
+  --text-dark: #000000;
+  --yellow: #ffcc00;
+  --yellow-dark: #e6b800;
+  --blue: #0044ff;
+  --blue-light: #4d7dff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: linear-gradient(180deg, #ffffff, #f5ddffff);
+  color: var(--text-dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.brand-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 800;
+    font-size: clamp(3rem, 10vw, 6.5rem);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00eaff, #ff00d4);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px rgba(255, 0, 212, 0.35),
+                 0 0 25px rgba(0, 234, 255, 0.25);
+}
+
+h2, h3 {
+  color: #000000;
+  margin-bottom: 20px;
+  text-shadow: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+button {
+  background-color: var(--yellow);
+  color: var(--text-dark);
+  border: none;
+  padding: 14px 32px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+button:hover {
+  background-color: var(--yellow-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+section {
+  padding: 80px 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================
+   HERO
+   ========================== */
+.hero {
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--yellow) 0%, var(--blue-light) 100%);
+  color: var(--text-dark);
+  border-bottom: 4px solid var(--blue);
+}
+
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.2rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #c59d00, #ffd84d, #c59d00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* ==========================
+   Cards Modernas
+   ========================== */
+.services-grid, .tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  padding: 30px;
+  border-radius: 18px;
+  min-width: 280px;
+  flex: 1 1 300px;
+  margin-bottom: 25px; 
+  color: var(--text-dark);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.08);
+  transition: transform 0.4s, box-shadow 0.4s, background 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+  opacity: 1;
+}
+
+.card.visible {
+  animation: cardPop 0.8s ease forwards;
+}
+
+@keyframes cardPop {
+  0% { opacity: 0; transform: scale(0.93); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 25px rgba(0,68,255,0.25);
+}
+
+/* ==========================
+   Formularios
+   ========================== */
+form {
+max-width: 600px;
+margin: 40px auto;
+padding: 30px;
+border-radius: 20px;
+backdrop-filter: blur(20px);
+background: rgba(255, 255, 255, 0.25);
+border: 1px solid rgba(255, 255, 255, 0.4);
+box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+
+form input,
+form textarea {
+width: 100%;
+padding: 14px;
+border-radius: 12px;
+border: none;
+margin-bottom: 15px;
+background: rgba(255, 255, 255, 0.8);
+box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+font-size: 1rem;
+color: var(--text-dark);
+transition: all 0.3s;
+}
+
+
+form input:focus,
+form textarea:focus {
+outline: none;
+background: rgba(255, 255, 255, 1);
+box-shadow: 0 0 10px rgba(0, 68, 255, 0.3);
+}
+
+
+form textarea {
+min-height: 130px;
+resize: none;
+}
+
+
+form button {
+width: 100%;
+margin-top: 10px;
+}
+
+/* ==========================
+   Footer
+   ========================== */
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  border-top: 3px solid var(--blue);
+  background-color: #f2f2f2;
+  color: var(--text-dark);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ==========================
+   Animaciones de aparición
+   ========================== */
+.fade-in { opacity: 0; transform: translateY(50px); }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+button.visible {
+  animation: buttonFadeIn 0.9s ease forwards;
+}
+
+@keyframes buttonFadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero { animation: fadeSlideIn 1.2s ease forwards; opacity: 0; }
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+   ========================== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  h1 {
+  font-size: 3.8rem;
+  color: #000000;
+  font-weight: 800;
+}
+  h2 { font-size: 1.8rem; }
+
+  .services-grid,
+  .tech-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.4rem; }
+  p { font-size: 1rem; }
+
+  section { padding: 60px 20px; }
+  .hero { padding: 40px 20px; }
+
+  button {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.95rem;
+  }
+}

@@ -1,5 +1,7 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import netlify from '@astrojs/netlify/functions'; // Adaptador para Netlify Functions
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  output: 'server',     // Necesario para manejar rutas API POST
+  adapter: netlify(),   // Lo conecta con Netlify Functions
+});
