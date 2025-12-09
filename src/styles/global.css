@@ -72,9 +72,7 @@ section.visible {
   transform: translateY(0);
 }
 
-/* ==========================
-   HERO
-   ========================== */
+/* hero */
 .hero {
   text-align: center;
   min-height: 80vh;
@@ -98,9 +96,7 @@ section.visible {
   text-fill-color: transparent;
 }
 
-/* ==========================
-   Cards Modernas
-   ========================== */
+/* cards */
 .services-grid, .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -141,9 +137,7 @@ section.visible {
   box-shadow: 0 15px 25px rgba(0,68,255,0.25);
 }
 
-/* ==========================
-   Formularios
-   ========================== */
+/* forms */
 form {
 max-width: 600px;
 margin: 40px auto;
@@ -190,9 +184,7 @@ width: 100%;
 margin-top: 10px;
 }
 
-/* ==========================
-   Footer
-   ========================== */
+/* footer */
 footer {
   text-align: center;
   padding: 50px 20px;
@@ -204,6 +196,79 @@ footer {
 footer p {
   margin: 0;
 }
+
+/* about */
+.sn-about-section {
+  padding: 120px 20px;
+}
+
+.sn-brand-title {
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ffcc00, #ffd84d);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sn-intro-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.sn-highlight {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.sn-about-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.sn-about-card {
+  padding: 30px;
+  border-radius: 20px;
+  color: #111;
+
+  /* glassmorphism */
+  backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sn-about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.sn-about-card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.sn-about-card ul {
+  padding-left: 20px;
+}
+
+.sn-about-card ul li {
+  margin-bottom: 8px;
+  list-style-type: "\2705";
+}
+
+
+
 
 /* ==========================
    Animaciones de aparición
@@ -273,5 +338,13 @@ button.visible {
   form input,
   form textarea {
     font-size: 0.95rem;
+  }
+
+    .sn-brand-title {
+    font-size: 2.4rem;
+  }
+
+  .sn-intro-text {
+    font-size: 1rem;
   }
 }
