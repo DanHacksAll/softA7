@@ -1,15 +1,20 @@
 ---
+import dappsImg from '../assets/web3.png';
+import smartContractsImg from '../assets/smartc.png';
+import web3Img from '../assets/integracion.png';
+
 const services = [
-{ title: "dApps", desc: "Aplicaciones descentralizadas seguras y escalables." },
-{ title: "Smart Contracts", desc: "Contratos inteligentes auditables y eficientes." },
-{ title: "Integración Web3", desc: "Conecta tu app tradicional con blockchain." }
+{ title: "dApps", desc: "Secure and scalable decentralized applications.", img: dappsImg },
+{ title: "Smart Contracts", desc: "Auditable and efficient smart contracts.", img: smartContractsImg },
+{ title: "Web3 Integration", desc: "Connect your traditional app with blockchain.", img: web3Img }
 ];
 ---
 <section class="container">
-<h2>Servicios</h2>
+<h2>Services</h2>
 <div style="display:flex; flex-wrap:wrap; justify-content:center;">
 {services.map(s => (
 <div class="card" style="flex:1 1 300px;">
+<img src={s.img.src} alt={s.title} style="width:100px; height:100px; object-fit:cover; margin-bottom:12px;" />
 <h3>{s.title}</h3>
 <p>{s.desc}</p>
 </div>
