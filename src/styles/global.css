@@ -123,6 +123,7 @@ section.visible {
   opacity: 1;
 }
 
+
 .card.visible {
   animation: cardPop 0.8s ease forwards;
 }
