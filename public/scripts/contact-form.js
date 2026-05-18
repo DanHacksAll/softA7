@@ -35,9 +35,9 @@ if (!form || !submitBtn || !statusMsg) {
 
       if (res.ok && result.success) {
         form.reset();
-        showStatus("✔️ Message sent successfully.", true);
+        showStatus("✔️ Mensaje enviado correctamente.", true);
       } else {
-        showStatus(result.error || "Error sending message.", false);
+        showStatus(result.error || "Error enviando mensaje.", false);
       }
     } catch (err) {
       console.error(err);
@@ -48,4 +48,3 @@ if (!form || !submitBtn || !statusMsg) {
     }
   });
 }
-
