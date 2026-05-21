@@ -1,11 +1,31 @@
 ---
-const tech = ["Solidity", "Ether.js", "Web3.js", "Polygon", "IPFS", "Astro", "Node.js", "Python", "Next.js"];
+const tech = [
+  { name: "Solidity", icon: "⚡" },
+  { name: "Ethers.js", icon: "🔌" },
+  { name: "Web3.js", icon: "🔌" },
+  { name: "Polygon", icon: "⛓️" },
+  { name: "IPFS", icon: "📦" },
+  { name: "Astro", icon: "🚀" },
+  { name: "Node.js", icon: "🖥️" },
+  { name: "Python", icon: "🐍" },
+  { name: "Next.js", icon: "⚛️" }
+];
 ---
-<section class="container">
-<h2>Technologies</h2>
-<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px;">
-{tech.map(t => (
-<span class="card" style="padding:10px 20px;">{t}</span>
-))}
-</div>
+
+<section style="background: var(--bg-gray); padding: 80px 20px; border-bottom: 1px solid #e0e0e0;">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 style="color: var(--text-dark); font-size: 2.2rem; margin: 0 0 15px 0; font-weight: 700;">Tecnologías</h2>
+      <div style="width: 60px; height: 3px; background: var(--orange); margin: 0 auto;"></div>
+    </div>
+    
+    <div class="tech-grid">
+      {tech.map(t => (
+        <div class="card tech-card">
+          <div style="font-size: 1.8rem; margin-bottom: 10px;">{t.icon}</div>
+          <span style="color: var(--text-dark); font-size: 0.95rem; font-weight: 600; display: block;">{t.name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
 </section>

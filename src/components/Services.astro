@@ -4,20 +4,36 @@ import smartContractsImg from '../assets/smartc.png';
 import web3Img from '../assets/integracion.png';
 
 const services = [
-{ title: "dApps", desc: "Secure and scalable decentralized applications.", img: dappsImg },
-{ title: "Smart Contracts", desc: "Auditable and efficient smart contracts.", img: smartContractsImg },
-{ title: "Web3 Integration", desc: "Connect your traditional app with blockchain.", img: web3Img }
+  { 
+    title: "Aplicaciones Descentralizadas", 
+    desc: "Desarrollamos dApps seguras y escalables con interfaces modernas. Arquitectura robusta, contratos auditados y seguridad de primer nivel.",
+  },
+  { 
+    title: "Smart Contracts", 
+    desc: "Contratos inteligentes eficientes y auditables en Solidity. Cumplimiento de estándares ERC, optimización de gas y auditorías de seguridad.",
+  },
+  { 
+    title: "Integración Web3", 
+    desc: "Conecta tu aplicación con blockchain. APIs, wallet integration, y soluciones híbridas Web2/Web3 completamente personalizadas.",
+  }
 ];
 ---
-<section class="container">
-<h2>Services</h2>
-<div style="display:flex; flex-wrap:wrap; justify-content:center;">
-{services.map(s => (
-<div class="card" style="flex:1 1 300px;">
-<img src={s.img.src} alt={s.title} style="width:100px; height:100px; object-fit:cover; margin-bottom:12px;" />
-<h3>{s.title}</h3>
-<p>{s.desc}</p>
-</div>
-))}
-</div>
+
+<section style="background: var(--bg-light); padding: 80px 20px; border-bottom: 1px solid #e0e0e0;">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 style="color: var(--text-dark); font-size: 2.2rem; margin: 0 0 15px 0; font-weight: 700;">Servicios</h2>
+      <div style="width: 60px; height: 3px; background: var(--orange); margin: 0 auto;"></div>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1100px; margin: 0 auto;">
+      {services.map(s => (
+        <div style="display: flex; flex-direction: column;">
+          <h3 style="color: var(--orange); font-size: 1.3rem; margin: 0 0 15px 0; font-weight: 600;">{s.title}</h3>
+          <div style="width: 40px; height: 2px; background: var(--orange); margin-bottom: 20px;"></div>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; margin: 0;">{s.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
 </section>

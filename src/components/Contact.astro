@@ -1,18 +1,47 @@
 ---
 ---
-<section class="container">
-  <h2>Contact</h2>
 
-  <form id="contactForm">
-    <input type="text" name="name" placeholder="Your name" required />
-    <input type="email" name="email" placeholder="Your email" required />
-    <textarea name="message" placeholder="Message..." required></textarea>
+<section id="contact" style="background: var(--bg-light); padding: 80px 20px; border-bottom: 1px solid #e0e0e0;">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 style="color: var(--text-dark); font-size: 2.2rem; margin: 0 0 15px 0; font-weight: 700;">Contacto</h2>
+      <div style="width: 60px; height: 3px; background: var(--orange); margin: 0 auto;"></div>
+    </div>
 
-    <button type="submit" id="submitBtn">Send</button>
+    <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 50px; font-size: 1rem; line-height: 1.6;">
+      ¿Tienes un proyecto blockchain en mente? Contacta con nosotros y explora cómo podemos ayudarte a llevarlo al siguiente nivel.
+    </p>
 
-    <div id="formStatus" style="display:none; margin-top:15px;"></div>
-  </form>
+    <form id="contactForm" style="max-width: 500px; margin: 0 auto; background: transparent; border: none; padding: 0; box-shadow: none;">
+      <input 
+        type="text" 
+        name="name" 
+        placeholder="Nombre completo" 
+        required 
+        style="background: white; border: 1px solid #ddd; color: var(--text-dark); margin-bottom: 15px;"
+      />
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="tu@empresa.com" 
+        required 
+        style="background: white; border: 1px solid #ddd; color: var(--text-dark); margin-bottom: 15px;"
+      />
+      <textarea 
+        name="message" 
+        placeholder="Cuéntame sobre tu proyecto..." 
+        required
+        style="background: white; border: 1px solid #ddd; color: var(--text-dark);"
+      ></textarea>
 
-  <!-- JS solo cliente -->
-  <script type="module" src="/scripts/contact-form.js"></script>
+      <button type="submit" id="submitBtn" style="background: var(--orange); width: 100%; margin-top: 10px; color: white;">
+        Enviar Mensaje
+      </button>
+
+      <div id="formStatus" style="display:none; margin-top:15px; padding: 15px; border-radius: 6px; text-align: center;"></div>
+    </form>
+
+    <!-- JS solo cliente -->
+    <script type="module" src="/scripts/contact-form.js"></script>
+  </div>
 </section>
