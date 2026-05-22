@@ -2,21 +2,25 @@
 
 ---
 
-<section class="hero container" style="position: relative;">
-  <div style="position: relative; z-index: 1; text-align: center;">
-    <p style="color: var(--orange); font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 20px 0; font-weight: 600;">Web3 Solutions</p>
-    <h1 class="brand-title" style="margin-bottom: 20px;">SOFTA7</h1>
-    <p style="font-size: 1.2rem; margin: 0 0 40px 0; color: var(--text-muted); max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; font-weight: 300;">
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true" data-bg-src="/images/hero/hero-bg.jpg"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-inner container">
+    <div class="content hero-content">
+    <p class="hero-tagline">Web3 Solutions</p>
+    <h1 class="brand-title hero-title">SOFTA7</h1>
+    <p class="hero-description">
       Desarrollo de aplicaciones blockchain escalables, seguras y modernas. Transformamos ideas en soluciones Web3 de clase mundial.
     </p>
-    <div style="margin: 40px 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-      <button id="connectWallet" style="flex: 0 1 auto; min-width: 180px;">
+    <div class="hero-actions">
+      <button id="connectWallet" class="hero-button">
         Conectar Wallet
       </button>
-      <a href="#contact" style="flex: 0 1 auto; min-width: 180px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid var(--orange); color: var(--orange); box-shadow: none; padding: 12px 28px; border-radius: 6px; font-weight: 600; transition: all 0.3s ease;">
+      <a class="hero-button hero-button--ghost" href="#contact">
         Más Información
       </a>
     </div>
-    <p id="walletAddress" style="margin-top: 20px; color: var(--orange); font-size: 0.9rem; min-height: 20px;"></p>
+    <p id="walletAddress" class="hero-wallet"></p>
   </div>
+</div>
 </section>

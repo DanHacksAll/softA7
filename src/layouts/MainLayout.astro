@@ -35,6 +35,9 @@ const { title = "SOFTA7" } = Astro.props;
 <!-- ✔️ Canonical URL -->
 <link rel="canonical" href="https://softa7.com" />
 
+<!-- ✔️ Preload hero background -->
+<link rel="preload" href="/images/hero/hero-bg.jpg" as="image" />
+
 <!-- ✔️ Favicon -->
 <link rel="icon" type="image/png" href="/favicon.ico" />
 
@@ -75,5 +78,6 @@ connectBtn.addEventListener("click", async () => {
 });
 </script>
 <script src="../scripts/fadeout.js"></script>
+<script defer src="/scripts/hero-bg-cache.js"></script>
 </body>
 </html>
